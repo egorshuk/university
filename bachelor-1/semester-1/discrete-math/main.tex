@@ -1,0 +1,80 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[russian]{babel}
+\usepackage{amsmath, amssymb, amsfonts, amsthm}
+\usepackage{import}
+\usepackage{graphicx, fancyhdr, epigraph, enumitem, multicol}
+\usepackage{enumerate}
+\usepackage[
+    colorlinks=true,
+    linkcolor=red,
+    urlcolor=blue,
+    pdfauthor={Lunev Egor},
+]{hyperref}
+
+\usepackage[
+    a4paper,
+    right = 1cm,
+    left = 1cm, 
+    top = 2cm,
+    bottom = 2cm,
+    footnotesep = 5mm
+]{geometry}
+\setlength{\headheight}{14pt}
+\interfootnotelinepenalty=10000
+\usepackage[dvipsnames, table]{xcolor}
+
+\usepackage[russian, noabbrev]{cleveref}
+\crefname{theorem}{теореме}{теоремам}
+\crefname{lemma}{лемме}{леммам}
+\crefname{equation}{уравнению}{уравнениям}
+\crefname{corollary}{следствию}{следствиям}
+\crefname{definition}{определению}{определениям}
+
+\pagestyle{fancy}
+\setlength{\epigraphwidth}{0.45\linewidth}
+\fancyhead{} 
+\fancyhead[LE]{\nouppercase{\rightmark\hfill\leftmark}}
+\fancyhead[RO]{\nouppercase{\leftmark\hfill\rightmark}}
+\fancyfoot{}
+\fancyfoot[LO,RE]{\thepage}
+
+\setlength{\tabcolsep}{12pt}
+\renewcommand{\arraystretch}{1.4}
+\setlength{\arrayrulewidth}{0.5mm}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Теорема}[section]
+\newtheorem{lemma}[theorem]{Лемма}
+\newtheorem{corollary}{Следствие}[theorem]
+\theoremstyle{definition}
+\newtheorem{definition}{Определение}[section]
+
+\usepackage[inline]{asymptote}
+\begin{asydef}
+    settings.outformat = "pdf";
+    import geometry;
+    pen hpen = deepgreen+6;
+\end{asydef}
+\def\asydir{asy}
+
+\newcommand{\incfig}[2][1]{
+    \def\svgwidth{#1\columnwidth}
+    \import{./figures/#2.pdf_tex}
+}
+
+\pdfsuppresswarningpagegroup=1
+
+\date{\today}
+\author{Лунёв Егор}
+\title{Конспект по course}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\pagebreak
+\section{first}
+wtf.
+\end{document}
+
