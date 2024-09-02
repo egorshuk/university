@@ -1,0 +1,9 @@
+priority 10
+snippet "hood" "neighbourhood" riA
+\mathring{$1}$0
+endsnippet
+
+priority 100
+snippet "([a-zA-Z])hood" "neighbourhood" riA
+\mathring{`!p snip.rv=match.group(1)`}
+endsnippet

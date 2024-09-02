@@ -1,11 +1,10 @@
-\documentclass[12pt]{article}
+\ProvidesPackage{course-styles}
 \usepackage[utf8]{inputenc}
 \usepackage[T2A]{fontenc}
 \usepackage[russian]{babel}
 \usepackage{amsmath, amssymb, amsfonts, amsthm}
 \usepackage{import}
 \usepackage{graphicx, fancyhdr, epigraph, enumitem, multicol}
-\usepackage{enumerate}
 \usepackage[
     colorlinks=true,
     linkcolor=red,
@@ -21,7 +20,7 @@
     bottom = 2cm,
     footnotesep = 5mm
 ]{geometry}
-\setlength{\headheight}{14pt}
+\setlength{\headheight}{16pt}
 \interfootnotelinepenalty=10000
 \usepackage[dvipsnames, table]{xcolor}
 
@@ -61,22 +60,9 @@
 
 \newcommand{\incfig}[2][1]{
     \def\svgwidth{#1\columnwidth}
-    \import{./figures/#2.pdf_tex}
+    \import{./figures}{#2.pdf_tex}
 }
 
 \pdfsuppresswarningpagegroup=1
 
-\date{\today}
-\author{Лунёв Егор}
-\title{Конспект по математическому анализу}
-
-\begin{document}
-\maketitle
-\tableofcontents
-\pagebreak
-\section{first}
-\[
-        
-.\]
-\end{document}
-
+\DeclareMathOperator\id{id}
